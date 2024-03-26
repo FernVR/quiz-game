@@ -16,3 +16,49 @@ body {
     padding: 40px;
     width: 90%;
 }
+
+.quiz-area h1 {
+    border-bottom: 1px solid #333;
+    font-size: 200%;
+    font-weight: 600;
+    padding-bottom: 30px;
+}
+
+.quiz {
+    padding: 10px 0;
+}
+
+.quiz h2 {
+    font-size: 150%;
+}
+
+.btn {
+    background-color: #fff;
+    border: 1px solid #222;
+    border-radius: 2rem;
+    color: #222;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+#next-btn {
+    background-color: #004d3f;
+    border: none;
+    border-radius: 2rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-weight: 600;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+}
