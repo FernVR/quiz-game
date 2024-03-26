@@ -62,3 +62,11 @@ body {
     margin: 20px auto 0;
     padding: 10px 20px;
 }
+
+.correct {
+    background-color: #9aeabc;
+}
+
+.incorrect {
+    background-color: #ff9393;
+}
