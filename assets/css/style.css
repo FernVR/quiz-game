@@ -46,9 +46,13 @@ body {
     width: 100%;
 }
 
-.btn:hover {
+.btn:hover:not([disabled]) {
     background-color: #222;
     color: #fff;
+}
+
+.btn:disabled {
+    cursor: no-drop;
 }
 
 #next-btn {
