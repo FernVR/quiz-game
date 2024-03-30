@@ -1,3 +1,5 @@
+
+
 const questions = [
     {
         question: "What country has the highest life expectancy?",
@@ -190,6 +192,14 @@ const nextButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0;
 let score = 0;
+
+//  Shuffle the questions array using Fisher-Yates algorithm
+for (let i = questions.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * i);
+    let temp = questions[i];
+    questions[i] = questions[j];
+    questions[j] = temp;
+}
 
 function startQuiz(){
     currentQuestionIndex = 0;
