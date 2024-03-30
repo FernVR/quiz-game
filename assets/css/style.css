@@ -19,7 +19,7 @@ body {
 
 .quiz-area h1 {
     border-bottom: 1px solid #333;
-    font-size: 200%;
+    font-size: 150%;
     font-weight: 600;
     padding-bottom: 30px;
 }
@@ -29,7 +29,7 @@ body {
 }
 
 .quiz h2 {
-    font-size: 150%;
+    font-size: 120%;
 }
 
 .btn {
@@ -53,6 +53,18 @@ body {
 
 .btn:disabled {
     cursor: no-drop;
+}
+
+.rules-heading {
+    color: #fff;
+    text-align: center;
+    font-size: 150%;
+}
+
+.rules-link {
+    color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
 #next-btn {

@@ -193,7 +193,7 @@ const nextButton = document.getElementById("next-btn");
 let currentQuestionIndex = 0;
 let score = 0;
 
-//  Shuffle the questions array using Fisher-Yates algorithm
+//  Shuffle the questions array using Fisher-Yates algorithm - FIND A GOOGLE CREDIT FOR THIS
 for (let i = questions.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * i);
     let temp = questions[i];
