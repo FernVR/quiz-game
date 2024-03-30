@@ -55,6 +55,10 @@ body {
     cursor: no-drop;
 }
 
+.start {
+    text-decoration: none;
+}
+
 .rules-heading {
     color: #fff;
     text-align: center;
@@ -85,4 +89,13 @@ body {
 
 .incorrect {
     background-color: #ff9393;
+}
+
+.score-area {
+    display: flex;
+    justify-content: space-between;
+}
+
+.score-area p, span{
+    color: #fff;
 }
