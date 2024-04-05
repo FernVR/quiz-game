@@ -11,7 +11,7 @@ body {
     background-color: #037762;
 }
 
-.rules-list {
+#rules-list {
     display: none;
 }
 
@@ -24,7 +24,7 @@ body {
     color: #fff;
 }
 
-.quiz-box {
+.quiz-box, .rules-box {
     background-color: #fff;
     border: 10px solid #014f41;
     border-radius: 2rem;

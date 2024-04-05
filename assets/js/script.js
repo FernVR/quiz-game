@@ -190,10 +190,14 @@ const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 const scores = document.getElementsByClassName("scores-area");
+const rulesButton = document.getElementById("rules");
+const rulesList = document.getElementById("rules-list");
 
 let currentQuestionIndex = 0;
 let score = 0;
 let incorrect = 0;
+
+
 
 //  Shuffle the questions array using Fisher-Yates algorithm - FIND A GOOGLE CREDIT FOR THIS
 function shuffleQuestions() {
@@ -205,9 +209,12 @@ function shuffleQuestions() {
     }
 }
 
+function displayRules(){
+    rulesList.style.display = "block";
+}
+
 function startQuiz() {
     shuffleQuestions();
-    resetScore();
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = "Next";
