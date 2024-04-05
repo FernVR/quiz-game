@@ -193,6 +193,7 @@ const scores = document.getElementsByClassName("scores-area");
 
 let currentQuestionIndex = 0;
 let score = 0;
+let incorrect = 0;
 
 //  Shuffle the questions array using Fisher-Yates algorithm - FIND A GOOGLE CREDIT FOR THIS
 function shuffleQuestions() {
@@ -206,6 +207,7 @@ function shuffleQuestions() {
 
 function startQuiz() {
     shuffleQuestions();
+    resetScore();
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = "Next";
@@ -230,6 +232,17 @@ function displayQuestion() {
     });
 }
 
+
+function incrementScore(){
+    score++;
+    document.getElementById("score").textContent = score;
+}
+
+function incrementIncorrect(){
+    incorrect++;
+    document.getElementById("incorrect").textContent = incorrect;
+}
+
 function resetState() {
     nextButton.style.display = "none";
     while (answerButtons.firstChild) {
@@ -237,14 +250,20 @@ function resetState() {
     }
 }
 
+function resetScore(){
+    score.innerHTML = "0";
+    incorrect.innerHTML = "0";
+}
+
 function selectAnswer(e) {
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
     if (isCorrect) {
         selectedBtn.classList.add("correct");
-        score++;
+        incrementScore();
     } else {
         selectedBtn.classList.add("incorrect");
+        incrementIncorrect();
     }
     Array.from(answerButtons.children).forEach(button => {
         if (button.dataset.correct === "true") {
