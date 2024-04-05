@@ -18,7 +18,7 @@ const questions = [
             { text: "Zeus", correct: false },
             { text: "Apollo", correct: true }
         ]
-    }, 
+    },
     {
         question: "What country drinks the most coffee?",
         answers: [
@@ -27,7 +27,7 @@ const questions = [
             { text: "Brazil", correct: false },
             { text: "Finland", correct: true }
         ]
-    }, 
+    },
     {
         question: "What is the smallest country in the world?",
         answers: [
@@ -73,7 +73,7 @@ const questions = [
             { text: "Sahara", correct: false },
             { text: "Kalahari", correct: false }
         ]
-    }, 
+    },
     {
         question: "Aureolin is a shade of what color?",
         answers: [
@@ -136,7 +136,7 @@ const questions = [
             { text: "4", correct: false },
             { text: "3", correct: true }
         ]
-    }, 
+    },
     {
         question: "Compared to their body weight, what animal is the strongest?",
         answers: [
@@ -146,7 +146,7 @@ const questions = [
             { text: "Elephant", correct: false }
         ]
     },
-    
+
     {
         question: "Where did sushi originate?",
         answers: [
@@ -155,7 +155,7 @@ const questions = [
             { text: "China", correct: true },
             { text: "Japan", correct: false }
         ]
-    }, 
+    },
     {
         question: "Pink Ladies and Granny Smiths are types of what fruit?",
         answers: [
@@ -182,7 +182,7 @@ const questions = [
             { text: "Rome", correct: true },
             { text: "Florence", correct: false }
         ]
-    },   
+    },
 ];
 
 
@@ -195,21 +195,24 @@ let currentQuestionIndex = 0;
 let score = 0;
 
 //  Shuffle the questions array using Fisher-Yates algorithm - FIND A GOOGLE CREDIT FOR THIS
-for (let i = questions.length - 1; i > 0; i--) {
-    let j = Math.floor(Math.random() * i);
-    let temp = questions[i];
-    questions[i] = questions[j];
-    questions[j] = temp;
+function shuffleQuestions() {
+    for (let i = questions.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * i);
+        let temp = questions[i];
+        questions[i] = questions[j];
+        questions[j] = temp;
+    }
 }
 
-function startQuiz(){
+function startQuiz() {
+    shuffleQuestions();
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = "Next";
     displayQuestion();
 }
 
-function displayQuestion(){
+function displayQuestion() {
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
@@ -220,31 +223,31 @@ function displayQuestion(){
         button.innerHTML = answer.text;
         button.classList.add("btn");
         answerButtons.appendChild(button);
-        if(answer.correct){
+        if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
         button.addEventListener("click", selectAnswer);
     });
 }
 
-function resetState(){
+function resetState() {
     nextButton.style.display = "none";
-    while(answerButtons.firstChild){
+    while (answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
     }
 }
 
-function selectAnswer(e){
+function selectAnswer(e) {
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
-    if(isCorrect){
+    if (isCorrect) {
         selectedBtn.classList.add("correct");
         score++;
     } else {
         selectedBtn.classList.add("incorrect");
     }
     Array.from(answerButtons.children).forEach(button => {
-        if(button.dataset.correct === "true"){
+        if (button.dataset.correct === "true") {
             button.classList.add("correct");
         }
         button.disabled = true;
@@ -252,26 +255,26 @@ function selectAnswer(e){
     nextButton.style.display = "block";
 }
 
-function showScore(){
+function showScore() {
     resetState();
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
 }
 
-function handleNextButton(){
+function handleNextButton() {
     currentQuestionIndex++;
-    if(currentQuestionIndex < questions.length){
+    if (currentQuestionIndex < questions.length) {
         displayQuestion();
-    }else{
+    } else {
         showScore();
     }
 }
 
-nextButton.addEventListener("click", ()=>{
-    if( currentQuestionIndex < questions.length){
+nextButton.addEventListener("click", () => {
+    if (currentQuestionIndex < questions.length) {
         handleNextButton();
-    }else{
+    } else {
         startQuiz();
     }
 });
