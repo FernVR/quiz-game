@@ -1,5 +1,4 @@
-
-
+// Questions Array
 const questions = [
     {
         question: "What country has the highest life expectancy?",
@@ -185,7 +184,7 @@ const questions = [
     },
 ];
 
-
+// Selected HTML elements in the DOM
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
@@ -193,6 +192,7 @@ const scores = document.getElementsByClassName("scores-area");
 const rulesButton = document.getElementById("rules");
 const rulesList = document.getElementById("rules-list");
 
+// Variables
 let currentQuestionIndex = 0;
 let score = 0;
 let incorrect = 0;
@@ -209,10 +209,12 @@ function shuffleQuestions() {
     }
 }
 
-function displayRules(){
+// Display rules function will show the list of rules when rules button is clicked (not yet)
+function displayRules() {
     rulesList.style.display = "block";
 }
 
+//Function to start the game
 function startQuiz() {
     shuffleQuestions();
     currentQuestionIndex = 0;
@@ -221,6 +223,7 @@ function startQuiz() {
     displayQuestion();
 }
 
+// Function to display the question and possible answers available for a user to select
 function displayQuestion() {
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
@@ -239,13 +242,13 @@ function displayQuestion() {
     });
 }
 
-
-function incrementScore(){
+// Functions to increment correct and incorrect scores to display in container on top of the game page
+function incrementScore() {
     score++;
     document.getElementById("score").textContent = score;
 }
 
-function incrementIncorrect(){
+function incrementIncorrect() {
     incorrect++;
     document.getElementById("incorrect").textContent = incorrect;
 }
@@ -257,10 +260,14 @@ function resetState() {
     }
 }
 
-function resetScore(){
+function resetScore() {
     score.innerHTML = "0";
     incorrect.innerHTML = "0";
 }
+
+/**  Function to select answer and check if answer is correct or incorrect, answers will have a class name 
+     of "correct" or "incorrect" to change colours in css doc and prevent a user from selecting
+*/
 
 function selectAnswer(e) {
     const selectedBtn = e.target;
@@ -281,6 +288,8 @@ function selectAnswer(e) {
     nextButton.style.display = "block";
 }
 
+// end of game displays final score
+
 function showScore() {
     resetState();
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
@@ -288,6 +297,8 @@ function showScore() {
     nextButton.style.display = "block";
 }
 
+/* next button will be displayed so long as there are questions in the array that require an answer
+   showScore function dispays score at the end of game */
 function handleNextButton() {
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
@@ -301,6 +312,7 @@ nextButton.addEventListener("click", () => {
     if (currentQuestionIndex < questions.length) {
         handleNextButton();
     } else {
+        resetScore();
         startQuiz();
     }
 });
