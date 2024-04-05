@@ -5,32 +5,41 @@
 * {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
-    font-size: 105%;
 }
 
 body {
     background-color: #037762;
 }
 
-.quiz-area {
+.rules-list {
+    display: none;
+}
+
+.score-area {
     display: flex;
+    justify-content: space-between;
+}
+
+.score-area p, span{
+    color: #fff;
 }
 
 .quiz-box {
     background-color: #fff;
     border: 10px solid #014f41;
     border-radius: 2rem;
-    margin: 100px auto 0;
-    max-width: 600px;
+    display: block;
+    margin-left: 35px;
+    margin-top: 30px;
     padding: 40px;
-    width: 90%;
+    width: 200px;
 }
 
 .quiz-box h1 {
     border-bottom: 1px solid #333;
-    font-size: 150%;
+    font-size: 140%;
     font-weight: 600;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 .quiz {
@@ -81,6 +90,7 @@ body {
     padding: 0;
 }
 
+
 #next-btn {
     background-color: #037762;
     border: none;
@@ -89,7 +99,6 @@ body {
     cursor: pointer;
     display: none;
     font-weight: 600;
-    margin: 20px auto 0;
     padding: 10px 20px;
 }
 
@@ -99,13 +108,4 @@ body {
 
 .incorrect {
     background-color: #ff7777;
-}
-
-.score-area {
-    display: flex;
-    justify-content: space-between;
-}
-
-.score-area p, span{
-    color: #fff;
 }
