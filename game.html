@@ -5,29 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
-    
+
     <title>Quiz Game</title>
 </head>
 
 <body>
     <a href="./index.html" class="rules-link">Rules</a>
     <div class="quiz-area">
-        <h1>General Knowledge Quiz</h1>
-        <div class="quiz">
-            <h2 id="question">the question displayed here</h2>
-            <div id="answer-buttons">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>
+        <p class="scores" id="correct-score">Correct<br> <span id="score">0</span></p>
+        <div class="quiz-box">
+            <h1>General Knowledge Quiz</h1>
+            <div class="quiz">
+                <h2 id="question">the question displayed here</h2>
+                <div id="answer-buttons">
+                    <button class="btn">Answer 1</button>
+                    <button class="btn">Answer 2</button>
+                    <button class="btn">Answer 3</button>
+                    <button class="btn">Answer 4</button>
+                </div>
+                <button id="next-btn">Next</button>
             </div>
-            <button id="next-btn">Next</button>
         </div>
+        <p class="scores" id="incorrect-score">Incorrect<br> <span id="incorrect">0</span></p>
     </div>
-    <div class="score-area">
-        <p class="scores">Correct Answers <br> <span id="score">0</span></p>
-        <p class="scores">Incorrect Answers <br> <span id="incorrect">0</span></p>
-    </div>
+
 
     <script src="./assets/js/script.js"></script>
 </body>

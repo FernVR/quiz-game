@@ -13,6 +13,10 @@ body {
 }
 
 .quiz-area {
+    display: flex;
+}
+
+.quiz-box {
     background-color: #fff;
     border: 10px solid #014f41;
     border-radius: 2rem;
@@ -22,7 +26,7 @@ body {
     width: 90%;
 }
 
-.quiz-area h1 {
+.quiz-box h1 {
     border-bottom: 1px solid #333;
     font-size: 150%;
     font-weight: 600;
