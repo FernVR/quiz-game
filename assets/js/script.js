@@ -189,7 +189,8 @@ const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 const scores = document.getElementsByClassName("scores-area");
-const rulesButton = document.getElementById("rules");
+const startBtn = document.getElementById("start-btn");
+const rulesBtn = document.getElementById("rules");
 const rulesList = document.getElementById("rules-list");
 
 // Variables
@@ -209,9 +210,22 @@ function shuffleQuestions() {
     }
 }
 
-// Display rules function will show the list of rules when rules button is clicked (not yet)
+// Shuffle answer options - How do i fix?? 
+
+function shuffleAnswers() {
+    for (let i = answers.text.length -1; 1 > 0; i--){
+        let j = Math.floor(math.random() * i);
+        let temp = answers.text[i];
+        answers.text[i] = answers.text[j];
+        answers.text[j] = temp;
+    }
+}
+
+// Display rules function will show the list of rules when rules button is clicked - How do i do??? (this doesn't work)
 function displayRules() {
-    rulesList.style.display = "block";
+    rulesBtn.addEventListener("click", () => {
+        rulesList.style.display = "block"  
+    })
 }
 
 //Function to start the game
@@ -259,6 +273,8 @@ function resetState() {
         answerButtons.removeChild(answerButtons.firstChild);
     }
 }
+
+// This doesn't work either- not sure at all how to fix it as I've tried a few different options and none seem to work
 
 function resetScore() {
     score.innerHTML = "0";
@@ -317,6 +333,5 @@ nextButton.addEventListener("click", () => {
     }
 });
 
-
-
+// Fix this somehow? doesn't run the quiz when added event listener?
 startQuiz();
