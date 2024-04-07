@@ -11,6 +11,33 @@ body {
     background-color: #037762;
 }
 
+.rules-box h1 {
+    font-size: 200%;
+    text-align: center;
+}
+
+#start-game-btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+#start-game-btns a {
+    background-color: #fff;
+    border: 1px solid #222;
+    border-radius: 2rem;
+    color: #222;
+    cursor: pointer;
+    font-size: 150%;
+    font-weight: 500;
+    padding: 10px 20px;
+    margin: 10px 0;
+}
+
+#start-game-btns a:hover:not([disabled]) {
+    background-color: #222;
+    color: #fff;
+}
+
 #rules-list {
     display: none;
 }
@@ -22,6 +49,7 @@ body {
 
 .score-area p, span{
     color: #fff;
+    font-size: larger;
 }
 
 .quiz-box, .rules-box {
@@ -47,7 +75,7 @@ body {
 }
 
 .quiz h2 {
-    font-size: 120%;
+    font-size: 130%;
 }
 
 .btn {
@@ -56,6 +84,7 @@ body {
     border-radius: 2rem;
     color: #222;
     cursor: pointer;
+    font-size: 120%;
     font-weight: 500;
     padding: 10px;
     margin: 10px 0;
@@ -73,6 +102,14 @@ body {
     cursor: no-drop;
 }
 
+#next-btn {
+    font-size: 120%;
+    letter-spacing: 3px;
+    margin-left: 60px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
 .start {
     text-decoration: none;
 }
@@ -86,6 +123,7 @@ body {
 
 .rules-link {
     color: #fff;
+    font-size: larger;
     margin: 0;
     padding: 0;
 }
