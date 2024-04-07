@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+/* General Styles */
+
 * {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
@@ -11,10 +13,14 @@ body {
     background-color: #037762;
 }
 
+/* Rules Page */
+
 .rules-box h1 {
     font-size: 200%;
     text-align: center;
 }
+
+/* Rules Box */
 
 #start-game-btns {
     display: flex;
@@ -38,9 +44,31 @@ body {
     color: #fff;
 }
 
+.start {
+    text-decoration: none;
+}
+
 #rules-list {
     display: none;
 }
+
+/* Game Page */
+
+.rules-heading {
+    color: #fff;
+    text-align: center;
+    font-size: 200%;
+    margin-top: 50px;
+}
+
+.rules-link {
+    color: #fff;
+    font-size: larger;
+    margin: 0;
+    padding: 0;
+}
+
+/* Score Tallys */
 
 .score-area {
     display: flex;
@@ -51,6 +79,8 @@ body {
     color: #fff;
     font-size: larger;
 }
+
+/* Quiz box area */
 
 .game-box {
     display: flex;
@@ -81,6 +111,8 @@ body {
     font-size: 130%;
 }
 
+/* Button styles */
+
 .btn {
     background-color: #fff;
     border: 1px solid #222;
@@ -106,40 +138,17 @@ body {
 }
 
 #next-btn {
-    font-size: 120%;
-    letter-spacing: 3px;
-    margin-left: 60px;
-    margin-top: 20px;
-    padding: 10px;
-}
-
-.start {
-    text-decoration: none;
-}
-
-.rules-heading {
-    color: #fff;
-    text-align: center;
-    font-size: 200%;
-    margin-top: 50px;
-}
-
-.rules-link {
-    color: #fff;
-    font-size: larger;
-    margin: 0;
-    padding: 0;
-}
-
-
-#next-btn {
     background-color: #037762;
     border: none;
     border-radius: 2rem;
     color: #fff;
     cursor: pointer;
     display: none;
+    font-size: 120%;
     font-weight: 600;
+    letter-spacing: 3px;
+    margin-left: 60px;
+    margin-top: 20px;
     padding: 10px 20px;
 }
 
