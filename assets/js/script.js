@@ -222,13 +222,6 @@ function shuffleAnswers() {
     }
 }
 
-// Display rules function will show the list of rules when rules button is clicked - How do i do??? (this doesn't work)
-function displayRules() {
-    rulesBtn.addEventListener("click", () => {
-        rulesList.style.display = "block"  
-    })
-}
-
 //Function to start the game
 function startQuiz() {
     shuffleQuestions();
