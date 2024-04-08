@@ -213,11 +213,12 @@ function shuffleQuestions() {
 // Shuffle answer options - How do i fix?? 
 
 function shuffleAnswers() {
-    for (let i = answers.text.length -1; 1 > 0; i--){
+    answers = questions[currentQuestionIndex].answers;
+    for (let i = answers.length -1; 1 > 0; i--){
         let j = Math.floor(math.random() * i);
-        let temp = answers.text[i];
-        answers.text[i] = answers.text[j];
-        answers.text[j] = temp;
+        let temp = answers[i];
+        answers[i] = answers[j];
+        answers[j] = temp;
     }
 }
 
@@ -231,8 +232,6 @@ function displayRules() {
 //Function to start the game
 function startQuiz() {
     shuffleQuestions();
-    currentQuestionIndex = 0;
-    score = 0;
     nextButton.innerHTML = "Next";
     displayQuestion();
 }
@@ -244,6 +243,7 @@ function displayQuestion() {
     let questionNo = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
 
+    shuffleAnswers();
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
         button.innerHTML = answer.text;
@@ -267,6 +267,8 @@ function incrementIncorrect() {
     document.getElementById("incorrect").textContent = incorrect;
 }
 
+// Reset state function removes next button from display until an answer is clicked
+
 function resetState() {
     nextButton.style.display = "none";
     while (answerButtons.firstChild) {
@@ -274,7 +276,7 @@ function resetState() {
     }
 }
 
-// This doesn't work either- not sure at all how to fix it as I've tried a few different options and none seem to work
+// Reset score function to reset the scores on the top of the game to 0
 
 function resetScore() {
     score = 0;
@@ -329,14 +331,44 @@ function handleNextButton() {
     }
 }
 
-nextButton.addEventListener("click", () => {
-    if (currentQuestionIndex < questions.length) {
-        handleNextButton();
-    } else {
-        resetScore();
-        startQuiz();
+document.addEventListener("DOMContentLoaded", () => {
+    if (nextButton){
+        nextButton.addEventListener('click', () => {
+            if (currentQuestionIndex < questions.length){
+                handleNextButton();
+            } else {
+                resetScore();
+                startQuiz();
+            }
+        });
     }
+    startQuiz();
 });
 
-// Fix this somehow? doesn't run the quiz when added event listener?
-startQuiz();
+function renderNextQuestion(){
+    if (currentQuestionIndex > questions.length){
+        return
+    }
+
+    currentQuestionIndex++;
+    displayQuestion();
+}
+
+function handleNextButton(){
+    if (currentQuestionIndex > questions.length){
+        showScore();
+        return;
+    }
+
+    renderNextQuestion();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    nextButton.addEventListener('click', handleNextButton);
+    restartGameButton.addEventListener("click", ()=> {
+        resetScore();
+        startQuiz();
+    })
+
+});
+
