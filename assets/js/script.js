@@ -277,8 +277,13 @@ function resetState() {
 // This doesn't work either- not sure at all how to fix it as I've tried a few different options and none seem to work
 
 function resetScore() {
-    score.innerHTML = "0";
-    incorrect.innerHTML = "0";
+    score = 0;
+    document.getElementById("score").textContent = 0;
+
+    incorrect = 0;
+    document.getElementById("incorrect").textContent = incorrect;
+
+    currentQuestionIndex = 0;
 }
 
 /**  Function to select answer and check if answer is correct or incorrect, answers will have a class name 
