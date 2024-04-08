@@ -215,7 +215,7 @@ function shuffleQuestions() {
 function shuffleAnswers() {
     answers = questions[currentQuestionIndex].answers;
     for (let i = answers.length -1; 1 > 0; i--){
-        let j = Math.floor(math.random() * i);
+        let j = Math.floor(Math.random() * i);
         let temp = answers[i];
         answers[i] = answers[j];
         answers[j] = temp;
@@ -354,14 +354,16 @@ function handleNextButton(){
     }
 
     renderNextQuestion();
-}
+};
 
-document.addEventListener("DOMContentLoaded", () => {
-    nextButton.addEventListener('click', handleNextButton);
-    restartGameButton.addEventListener("click", ()=> {
-        resetScore();
-        startQuiz();
-    })
-
+document.addEventListener('DOMContentLoaded', () => {
+    nextButton.addEventListener("click", handleNextButton);
+    resetScore();
+    startQuiz();
 });
+
+
+
+
+
 
