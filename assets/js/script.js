@@ -234,7 +234,7 @@ function startQuiz() {
 
 // Function to display the question and possible answers available for a user to select
 function displayQuestion() {
-
+    
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
