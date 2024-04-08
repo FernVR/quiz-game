@@ -1,39 +1,116 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome,
+# Title of Game displayed here
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+(screenshot of game on all screen sizes)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+## Overview
 
-## Codeanywhere Reminders
+A brief overview of what the quiz does and how it works ETC. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## Contents 
 
-`python3 -m http.server`
+contents of all sections of Readme file
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+# User Experience
+## User stories
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+# Design 
+### Wireframes
+### Typography
+### Colour Scheme
+### Imagery 
 
-`http_server`
+# Features 
+## Home Page 
+## Rules Page 
+## Game Page
+## Show Score Section
+## Future features
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+# Technologies Used 
+## Languages Used
+## Frameworks, Libraries & Programs Used
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+# Testing
+## Validation
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
-To log into the Heroku toolbelt CLI:
+### W3C Markup Validator
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+-   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - I input the source code from each page into the validator and all pages received no errors or warnings.
+    (screenshot of result)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### W3C CSS Validator
+    
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+    screenshot of result
+    
 
----
+## Lighthouse Testing
+### Home Page Result
+### Rules Page Result
+### Game Page Result 
 
-Happy coding!
+## Further Testing
+
+### Test Grid 
+
+I created a testing grid on Apple Numbers which I used throughout the process of building this site. The grids have categories for each link/button to ensure all of them work correctly and redirect to a new tab if needed. There is also a grid to test responsive design for each section of the page, the different sections are outlined below.
+
+-   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
+
+-   The website was viewed and tested on a variety of devices such as Desktop, Laptop, iPhone 10, iPhone 12, iPhone 14 Pro and iPad Pro.
+
+-   A large amount of testing was done to ensure that all pages were linking correctly, as well as buttons and form submition and inputs.
+
+-   I also did a good amount of testing the responsiveness of the website on different phone screens vertical and horizontal view, to make sure all the images and text are the correct size and position.
+
+-   Friends and family members were asked to review the site and documentation to point out any bugs or user experience issues.
+
+-   Tested on all devices available on chrome developer tools.
+
+## Fixed Bugs
+## Known Bugs
+
+# Deployment
+
+## GitHub Pages
+
+The project was deployed to GitHub Pages using the following steps:
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+2. At the top of the Repository, locate the "Settings" Button on the menu.
+3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
+4. Under "Source", click the dropdown called "None" and select "Master Branch".
+5. The page will automatically refresh.
+6. Scroll back down through the page to locate the now published site in the "GitHub Pages" section.
+
+## Forking the GitHub Repository
+
+By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+3. You should now have a copy of the original repository in your GitHub account.
+
+## Making a Local Clone
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+2. Under the repository name, click "Clone or download".
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone`, and then paste the URL you copied in Step 3.
+
+# Credits 
+## Code
+## Content
+## Media 
+
+# Acknowledgments 
+
+
+
+
+
