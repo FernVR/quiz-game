@@ -210,33 +210,37 @@ function shuffleQuestions() {
     }
 }
 
-// Shuffle answer options - How do i fix?? 
+// Shuffle answer options - SOMETHING HERE CAUSING A BUG
 
 function shuffleAnswers() {
-    answers = questions[currentQuestionIndex].answers;
-    for (let i = answers.length -1; 1 > 0; i--){
+    answersArray = questions[currentQuestionIndex].answers;
+    for (let i = answersArray.length -1; 1 > 0; i--){
         let j = Math.floor(Math.random() * i);
-        let temp = answers[i];
-        answers[i] = answers[j];
-        answers[j] = temp;
+        let temp = answersArray[i];
+        answersArray[i] = answersArray[j];
+        answersArray[j] = temp;
     }
 }
 
 //Function to start the game
 function startQuiz() {
     shuffleQuestions();
+    score = 0;
+    incorrect = 0;
+    currentQuestionIndex = 0;
     nextButton.innerHTML = "Next";
     displayQuestion();
 }
 
 // Function to display the question and possible answers available for a user to select
 function displayQuestion() {
+
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
 
-    shuffleAnswers();
+
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
         button.innerHTML = answer.text;
@@ -315,6 +319,8 @@ function showScore() {
 
 /* next button will be displayed so long as there are questions in the array that require an answer
    showScore function dispays score at the end of game */
+
+
 function handleNextButton() {
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
@@ -322,11 +328,11 @@ function handleNextButton() {
     } else {
         showScore();
     }
-}
+}; 
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
     if (nextButton){
-        nextButton.addEventListener('click', () => {
+        nextButton.addEventListener("click", () => {
             if (currentQuestionIndex < questions.length){
                 handleNextButton();
             } else {
@@ -338,29 +344,9 @@ document.addEventListener("DOMContentLoaded", () => {
     startQuiz();
 });
 
-function renderNextQuestion(){
-    if (currentQuestionIndex > questions.length){
-        return
-    }
 
-    currentQuestionIndex++;
-    displayQuestion();
-}
 
-function handleNextButton(){
-    if (currentQuestionIndex > questions.length){
-        showScore();
-        return;
-    }
 
-    renderNextQuestion();
-};
-
-document.addEventListener('DOMContentLoaded', () => {
-    nextButton.addEventListener("click", handleNextButton);
-    resetScore();
-    startQuiz();
-});
 
 
 
