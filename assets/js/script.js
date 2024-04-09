@@ -214,7 +214,7 @@ function shuffleQuestions() {
 
 function shuffleAnswers() {
     answersArray = questions[currentQuestionIndex].answers;
-    for (let i = answersArray.length -1; 1 > 0; i--){
+    for (let i = answersArray.length -1; i > 0; i--){
         let j = Math.floor(Math.random() * i);
         let temp = answersArray[i];
         answersArray[i] = answersArray[j];
@@ -234,6 +234,8 @@ function startQuiz() {
 
 // Function to display the question and possible answers available for a user to select
 function displayQuestion() {
+
+    shuffleAnswers();
     
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
