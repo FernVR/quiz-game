@@ -13,7 +13,7 @@
 
 body {
     background-color: #BE93FD;
-    background-image: url(/assets/images/bg-image-quiz-1.jpg);
+    background-image: url(../images/bg-image-quiz-1.jpg);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
