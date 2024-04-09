@@ -199,6 +199,15 @@ let score = 0;
 let incorrect = 0;
 
 
+function enterName() {
+    let userName = prompt("Enter your name");
+    if (userName === null || userName === "") {
+        userName = "Hidden Player";
+    }
+    return userName;
+}
+
+
 
 //  Shuffle the questions array using Fisher-Yates algorithm - FIND A GOOGLE CREDIT FOR THIS
 function shuffleQuestions() {
@@ -234,7 +243,6 @@ function startQuiz() {
 
 // Function to display the question and possible answers available for a user to select
 function displayQuestion() {
-
     shuffleAnswers();
     
     resetState();
@@ -314,7 +322,7 @@ function selectAnswer(e) {
 
 function showScore() {
     resetState();
-    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    questionElement.innerHTML = `Well done ${enterName()}! You scored ${score} out of ${questions.length}!`;
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
 }
