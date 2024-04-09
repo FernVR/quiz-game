@@ -53,14 +53,15 @@ footer ul a {
 	font-size: 1.5em;
 }
 
-/* Rules Page */
+/* Home Page */
 
-.rules-box h1 {
-    font-size: 200%;
+/* Box */
+
+.box h1 {
+    font-size: 150%;
+    margin: 20px 0;
     text-align: center;
 }
-
-/* Rules Box */
 
 #start-game-btns {
     display: flex;
@@ -88,8 +89,18 @@ footer ul a {
     text-decoration: none;
 }
 
-#rules-list {
-    display: none;
+/* Rules Page */
+
+.rules ul {
+    margin-bottom: 50px;
+}
+
+.rules ul li {
+    margin: 20px 0;
+}
+
+#rules-start {
+    padding: 10px 30px;
 }
 
 /* Game Page */
@@ -137,7 +148,7 @@ span {
 }
 
 .quiz-box,
-.rules-box {
+.box {
     background-color: #fff;
     border: 10px solid #BE93FD;
     border-radius: 2rem;
