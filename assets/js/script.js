@@ -219,7 +219,7 @@ function shuffleQuestions() {
     }
 }
 
-// Shuffle answer options - SOMETHING HERE CAUSING A BUG
+// Shuffle answer options 
 
 function shuffleAnswers() {
     answersArray = questions[currentQuestionIndex].answers;
@@ -321,8 +321,17 @@ function selectAnswer(e) {
 // end of game displays final score
 
 function showScore() {
+    
     resetState();
-    questionElement.innerHTML = `Well done ${enterName()}! You scored ${score} out of ${questions.length}!`;
+
+    if (score === questions.length){
+        questionElement.innerHTML = `WOW ${enterName()}, what an amazing score! You got ${score} out of ${questions.length}!`;
+    } else if (score > incorrect){
+        questionElement.innerHTML = `WOW ${enterName()}, great score! You got ${score} out of ${questions.length}!`;
+    } else {
+        questionElement.innerHTML = `Better luck next time ${enterName()}, You got ${score} out of ${questions.length}!`;
+    }
+
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
 }
