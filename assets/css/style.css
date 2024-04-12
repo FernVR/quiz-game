@@ -220,7 +220,36 @@ span {
     background-color: #ff8f8f;
 }
 
+#important {
+    color: #b61111;
+    text-decoration: underline;
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+}
 
-.show-score {
-    line-height: 300px;
+
+/* Media Query for Large Tablets / Laptop / Desktop screen sizes */
+
+@media screen and (min-width: 1024px){
+  
+#home-box {
+    width: 300px;
+}
+
+.quiz-box,
+.box {
+    padding: 75px;
+    width: 550px;
+}
+
+#start-game-btns {
+    justify-content: center;
+    gap: 30px;
+}
+
+.rules ul li {
+    font-size: 125%;
+}
+
 }

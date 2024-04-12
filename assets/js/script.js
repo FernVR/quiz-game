@@ -1,4 +1,6 @@
 // Questions Array
+
+// Add credit of Qs to thought catalog website (project bookmarks) 
 const questions = [
     {
         question: "How long did the war between England and Zanzibar last?",
