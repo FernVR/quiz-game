@@ -208,7 +208,6 @@ span {
     font-size: 120%;
     font-weight: 600;
     letter-spacing: 3px;
-    margin-left: 60px;
     margin-top: 20px;
     padding: 10px 20px;
 }
@@ -219,4 +218,9 @@ span {
 
 .incorrect {
     background-color: #ff8f8f;
+}
+
+
+.show-score {
+    line-height: 300px;
 }

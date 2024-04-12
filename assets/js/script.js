@@ -1,148 +1,148 @@
 // Questions Array
 const questions = [
     {
-        question: "What country has the highest life expectancy?",
+        question: "How long did the war between England and Zanzibar last?",
         answers: [
+            { text: "3 hours", correct: false },
+            { text: "45 Minutes", correct: true },
+            { text: "3 days", correct: false },
+            { text: "3 Weeks", correct: false }
+        ]
+    },
+    {
+        question: "What was the name of the research ship Charles Darwin traveled with?",
+        answers: [
+            { text: "The Golden Retriever", correct: false },
+            { text: "The Bulldog", correct: false },
+            { text: "The Spaniel", correct: false },
+            { text: "The Beagle", correct: true }
+        ]
+    },
+    {
+        question: "In which year was John F. Kennedy assassinated?",
+        answers: [
+            { text: "1960", correct: false },
+            { text: "1969", correct: false },
+            { text: "1961", correct: false },
+            { text: "1963", correct: true }
+        ]
+    },
+    {
+        question: "Greenland was a colony of which country until 1981?",
+        answers: [
+            { text: "Denmark", correct: true },
             { text: "Sweden", correct: false },
-            { text: "Hong Kong", correct: true },
-            { text: "USA", correct: false },
-            { text: "Portugal", correct: false }
+            { text: "Russia", correct: false },
+            { text: "Switzerland", correct: false }
         ]
     },
     {
-        question: "Who was the Ancient Greek God of the Sun?",
+        question: "How many days in a week were there in ancient Roman times?",
         answers: [
-            { text: "Dionysus", correct: false },
-            { text: "Ares", correct: false },
-            { text: "Zeus", correct: false },
-            { text: "Apollo", correct: true }
+            { text: "8", correct: true },
+            { text: "10", correct: false },
+            { text: "12", correct: false },
+            { text: "5", correct: false }
         ]
     },
     {
-        question: "What country drinks the most coffee?",
+        question: "When did the first Space Shuttle go into space?",
         answers: [
-            { text: "France", correct: false },
-            { text: "Italy", correct: false },
-            { text: "Brazil", correct: false },
-            { text: "Finland", correct: true }
+            { text: "March 1st, 1983", correct: false },
+            { text: "February 31st, 1981", correct: false },
+            { text: "May 27th, 1978", correct: false },
+            { text: "April 12th, 1981", correct: true }
         ]
     },
     {
-        question: "What is the smallest country in the world?",
+        question: "Who was shot outside the Hilton Hotel in Washington on March 30th, 1981?",
         answers: [
-            { text: "Vatican City", correct: true },
-            { text: "Bhutan", correct: false },
-            { text: "Nepal", correct: false },
-            { text: "Sri Lanka", correct: false }
-        ]
-    },
-    {
-        question: "Simone Biles is famous for her skill in what sport?",
-        answers: [
-            { text: "Gymnastics", correct: true },
-            { text: "Football", correct: false },
-            { text: "Tennis", correct: false },
-            { text: "Rowing", correct: false }
-        ]
-    },
-    {
-        question: "In what country was Elon Musk born?",
-        answers: [
-            { text: "Denmark", correct: false },
-            { text: "USA", correct: false },
-            { text: "Germany", correct: false },
-            { text: "South Africa", correct: true }
-        ]
-    },
-    {
-        question: "How many minutes are in a full week?",
-        answers: [
-            { text: "5,065", correct: false },
-            { text: "10,080", correct: true },
-            { text: "25,120", correct: false },
-            { text: "100,000", correct: false }
+            { text: "John Lennon", correct: false },
+            { text: "Ronald Reagan", correct: true },
+            { text: "Martin Luther King Jr", correct: false },
+            { text: "Yitzhak Rabin", correct: false }
         ]
     },
 
     {
-        question: "What is the largest desert in the world?",
+        question: "Where were the first modern Olympics held?",
         answers: [
-            { text: "Antartica", correct: true },
-            { text: "Gobi", correct: false },
-            { text: "Sahara", correct: false },
-            { text: "Kalahari", correct: false }
+            { text: "Athens", correct: true },
+            { text: "Rome", correct: false },
+            { text: "London", correct: false },
+            { text: "Moscow", correct: false }
         ]
     },
     {
-        question: "Aureolin is a shade of what color?",
+        question: "Which Russian astronaut was the first man to conduct a spacewalk?",
         answers: [
-            { text: "Pink", correct: false },
-            { text: "Gold", correct: false },
-            { text: "Yellow", correct: true },
-            { text: "Green", correct: false }
+            { text: "Yuri Gagarin", correct: false },
+            { text: "Vladimir Komarov", correct: false },
+            { text: "Alexey Leonov", correct: true },
+            { text: "Sergei Krikalev", correct: false }
         ]
     },
     {
-        question: "Which is the smallest continent in the world?",
+        question: "What is the modern name for Van Diemen's Land?",
         answers: [
-            { text: "Asia", correct: false },
-            { text: "Australia", correct: true },
-            { text: "Europe", correct: false },
-            { text: "Africa", correct: false }
+            { text: "Siberia", correct: false },
+            { text: "Tasmania", correct: true },
+            { text: "Belarus", correct: false },
+            { text: "North Korea", correct: false }
         ]
     },
     {
-        question: "How many ghosts chase Pac-Man at the start of each game?",
+        question: "Roald Amundsen led a successful expedition to what location in 1911?",
         answers: [
-            { text: "5", correct: false },
-            { text: "2", correct: false },
-            { text: "4", correct: true },
+            { text: "Death Valley Expedition", correct: false },
+            { text: "Mount Everest", correct: false },
+            { text: "The South Pole", correct: true },
+            { text: "Apollo", correct: false }
+        ]
+    },
+    {
+        question: "The ancient city of Rome was built on how many hills?",
+        answers: [
+            { text: "6", correct: false },
+            { text: "7", correct: true },
+            { text: "10", correct: false },
             { text: "3", correct: false }
         ]
     },
     {
-        question: "What is the largest animal in the world?",
+        question: "Who built the first car in America?",
         answers: [
-            { text: "Shark", correct: false },
-            { text: "Blue Whale", correct: true },
-            { text: "Elephant", correct: false },
-            { text: "Giraffe", correct: false }
+            { text: "James Bentley", correct: false },
+            { text: "Harry Mercedes", correct: false },
+            { text: "Henry Ford", correct: true },
+            { text: "Ronald Renault", correct: false }
         ]
     },
     {
-        question: "Which planet has the most moons?",
+        question: "Which war took place between 1950 and 1953?",
         answers: [
-            { text: "Jupiter", correct: false },
-            { text: "Venus", correct: false },
-            { text: "Saturn", correct: true },
-            { text: "Uranus", correct: false }
+            { text: "World War 1", correct: false },
+            { text: "The Cold War", correct: false },
+            { text: "The Korean War", correct: true },
+            { text: "American Civil War", correct: false }
         ]
     },
     {
-        question: "In what African country would you find Mount Kilimanjaro?",
+        question: "What is the name of the first human civilization?",
         answers: [
-            { text: "Kenya", correct: false },
-            { text: "Zambia", correct: false },
-            { text: "Tanzania", correct: true },
-            { text: "Ghana", correct: false }
+            { text: "Indus River Valley Civilization", correct: false },
+            { text: "Ancient Mesoamerica", correct: false },
+            { text: "Ancient Egypt", correct: false },
+            { text: "Mesopotamia", correct: true }
         ]
     },
     {
-        question: "How many bones do we have in an ear?",
+        question: "Which team won the first Super Bowl?",
         answers: [
-            { text: "5", correct: false },
-            { text: "2", correct: false },
-            { text: "4", correct: false },
-            { text: "3", correct: true }
-        ]
-    },
-    {
-        question: "Compared to their body weight, what animal is the strongest?",
-        answers: [
-            { text: "Dung Beetle", correct: true },
-            { text: "Cow", correct: false },
-            { text: "Ant", correct: false },
-            { text: "Elephant", correct: false }
+            { text: "GreenBay Packers", correct: true },
+            { text: "Philadelphia Eagles", correct: false },
+            { text: "Denver Broncos", correct: false },
+            { text: "Kansas City Chiefs", correct: false }
         ]
     },
 
@@ -156,30 +156,30 @@ const questions = [
         ]
     },
     {
-        question: "Pink Ladies and Granny Smiths are types of what fruit?",
+        question: "How many times has the Mona Lisa been stolen?",
         answers: [
-            { text: "Apples", correct: true },
-            { text: "Bananas", correct: false },
-            { text: "Oranges", correct: false },
-            { text: "Strawberries", correct: false }
+            { text: "1", correct: true },
+            { text: "3", correct: false },
+            { text: "50", correct: false },
+            { text: "12", correct: false }
         ]
     },
     {
-        question: "Scuttle stars in which Disney movie?",
+        question: "In which year was the Berlin Wall torn down?",
         answers: [
-            { text: "Snow White", correct: false },
-            { text: "Sleeping Beauty", correct: false },
-            { text: "Tangled", correct: false },
-            { text: "The Little Mermaid", correct: true }
+            { text: "1969", correct: false },
+            { text: "1993", correct: false },
+            { text: "1979", correct: false },
+            { text: "1989", correct: true }
         ]
     },
     {
-        question: "Cacio & Pepe is a staple of what Italian city's cuisine?",
+        question: "What is the name of The Beatles' debut album?",
         answers: [
-            { text: "Milan", correct: false },
-            { text: "Venice", correct: false },
-            { text: "Rome", correct: true },
-            { text: "Florence", correct: false }
+            { text: "Revolver", correct: false },
+            { text: "Abbey Road", correct: false },
+            { text: "Please Please Me", correct: true },
+            { text: "Rubber Soul", correct: false }
         ]
     },
 ];
