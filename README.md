@@ -232,7 +232,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 ## Lighthouse Testing
 ### Home Page Result
 
-(screenshot of result)
+![Lighthouse Test - Home page](./assets/images/readme-images/PP2-readme-lighthouse-home.png)
 
 ### Rules Page Result
 
@@ -240,7 +240,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ### Game Page Result
 
-(screenshot of result) 
+![Lighthouse Test - Game page](./assets/images/readme-images/pp2-readme-lighthouse-game.png)
 
 ## Further Testing
 
