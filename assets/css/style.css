@@ -248,7 +248,7 @@ span {
     background-color: #ff8f8f;
 }
 
-.important {
+.rules ul li span {
     color: #b61111;
     text-decoration: underline;
     padding: 0;
