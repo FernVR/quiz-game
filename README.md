@@ -1,15 +1,17 @@
 
-# Title of Game displayed here
-
-(screenshot of game on all screen sizes)
+# The Ultimate History Quiz
 
 ## Overview
 
-This is a bla bla 
+I created this site with the idea of creating a history general knowledge quiz, designed to challenge and aid students or users of any age group, in improving their history knowledge.
+
+I thought this site would be useful and entertaining to a range of different users, from all age groups and backgrounds. The quiz questions are a wide range of different topics from all parts of history.
+
+You can find the live site [here](https://fernvr.github.io/quiz-game/)
+
+![](./assets/images/readme-images/PP2-readme-am-i-responsive.png)
 
 ## Contents 
-
-contents of all sections of Readme file
 
 - [Overview](#overview)
 - [Contents](#contents)
@@ -215,18 +217,30 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ### W3C Markup Validator
 
--   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - I input the source code from each page into the validator and all pages received no errors or warnings.
-    (screenshot of result)
+-   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
+    * I input the source code from each page into the validator and all pages received no errors or warnings.
+
+    ![Game Page Result](./assets/images/readme-images/PP2-readme-html-validator-game.png)
+    * Game Page Result
+
+    ![Home Page Result](./assets/images/readme-images/PP2-readme-html-validator-home.png)
+    * Home Page Result
+
+    ![Rules Page Result](./assets/images/readme-images/PP2-readme-html-validator-rules.png)
+    * Rules Page Result
 
 ### W3C CSS Validator
     
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
-    screenshot of result
+
+    ![CSS Result](./assets/images/readme-images/PP2-readme-css-validator.png)
 
 ### JSHint Validator
 
 - [JSHint Validator](https://jshint.com/)
-    (screenshot of result)
+
+    ![JS Result](./assets/images/readme-images/PP2-readme-JS-validator.png)
+    * I struggled with figuring out how to get rid of these warnings, but my mentor reassured me that it wasn't anything to worry about.
     
 
 ## Lighthouse Testing
@@ -236,7 +250,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ### Rules Page Result
 
-(screenshot of result)
+![Lighthouse Test - Rules Page](./assets/images/readme-images/PP2-readme-lighthouse-rules.png)
 
 ### Game Page Result
 
