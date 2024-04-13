@@ -12,7 +12,7 @@
 
 body {
     background-color: #BE93FD;
-    background-image: url(../images/bg-image-quiz-1.jpg);
+    background-image: url(../images/bg-image.webp);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
