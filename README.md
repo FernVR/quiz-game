@@ -251,7 +251,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 - [JSHint Validator](https://jshint.com/)
 
     ![JS Result](./assets/images/readme-images/PP2-readme-JS-validator.png)
-    * I struggled with figuring out how to get rid of these warnings, but my mentor reassured me that it wasn't anything to worry about.
+    * I struggled with figuring out how to get rid of these warnings, but my mentor reassured me that it wasn't anything to worry about to keep them in.
     
 
 ## Lighthouse Testing
