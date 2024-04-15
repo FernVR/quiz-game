@@ -83,9 +83,12 @@ You can find the live site [here](https://fernvr.github.io/quiz-game/)
 # Design 
 ## Wireframes
 
-images of wireframe sketches and plans of functions.
+* I did some (very rough) sketches on my iPad notes with the general ideas for the structural layout of the game as well as ideas for a few of the functions.
 
-* I did sketches on my iPad notes with the general ideas for the structural layout of the game as well as a few of the functions.
+![](./assets/images/readme-images/PP2-wireframe-4.png)
+![](./assets/images/readme-images/PP2-wireframe-3.png)
+![](./assets/images/readme-images/PP2-wireframe-2.png)
+![](./assets/images/readme-images/PP2-wireframe-1.png)
 
 ## Typography
 
