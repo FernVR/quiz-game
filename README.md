@@ -287,7 +287,6 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 * I fixed a few different bugs throughout the process of building this game, mostly just syntax errors, but I discovered how a typo error can be detrimental in JavaScript in accidentally creating an infinite loop and crashing the site on multiple occasions! I identified a typo in the shuffleAnswers function where I put 1 > 0 instead of i > 0 and once I fixed it I was able to call the function in the code to shuffle the answers displayed without any issues. 
 
-* describe another bug i fixed?
 
 ## Known Bugs
 
@@ -327,7 +326,7 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 
 ## Code
 
-* I took inspiration for structuring the game from this video in on this youtube channel: [Great Stack](https://www.youtube.com/watch?v=PBcqGxrr9g8&t=1123s).
+* I took a lot of inspiration for structuring the questions array and the functions of the game from this video in on this youtube channel: [Great Stack](https://www.youtube.com/watch?v=PBcqGxrr9g8&t=1123s).
 * I have highlighted code taken from this tutorial in comments in the Javascript and CSS documents.
 * I used Fisher Yates algorithm to shuffle questions and answers in the functions of this quiz, I took the information from this website [Medium](https://medium.com/@omar.rashid2/fisher-yates-shuffle-a2aa15578d2f).
 

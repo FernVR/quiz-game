@@ -244,7 +244,6 @@ function startQuiz() {
 }
 
 // Reset state function removes next button from display until an answer is clicked
-
 function resetState() {
     nextButton.style.display = "none";
     while (answerButtons.firstChild) {
@@ -287,7 +286,6 @@ function displayQuestion() {
  * calls button.disabled = true to disable the button once user has selected their option, not allowing user to reselect their answer once selected.
  * displays next button after answer has been selected.
 */
-
 function selectAnswer(e) {
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
@@ -324,7 +322,6 @@ function incrementIncorrect() {
 /** function resetScore
  * resets score, incorrect and currentQuestionIndex to 0 when called.
  */
-
 function resetScore() {
     score = 0;
     document.getElementById("score").textContent = 0;
@@ -334,7 +331,6 @@ function resetScore() {
 
     currentQuestionIndex = 0;
 }
-
 
 /** Function enterName
  * a prompt to allow the user to enter their name.
@@ -355,9 +351,7 @@ function enterName() {
  * the enterName function is called here so the user's inputted name is displayed in the final message with the final score.
  * 'next' button becomes 'play again' and clicking it will restart the game and reset the users score tally.
  */
-
 function showScore() {
-
     resetState();
 
     if (score === questions.length) {
@@ -372,12 +366,10 @@ function showScore() {
     nextButton.style.display = "block";
 }
 
-
 /** function handleNextButton
 * next button will be displayed so long as there are questions in the array that require an answer
 * showScore function dispays score at the end of game when user has answered all questions in the array.
 */
-
 function handleNextButton() {
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
@@ -390,9 +382,7 @@ function handleNextButton() {
 /** event listener 'DOMContentLoaded'
  * ensures that when site content is loaded then the game can start when the user enters the game page.
  * game will proceed until the answers are all ran through, will reset score and restart game when 'play again' / 'next' button is clicked.
- * 
  */
-
 document.addEventListener('DOMContentLoaded', () => {
     if (nextButton) {
         nextButton.addEventListener("click", () => {

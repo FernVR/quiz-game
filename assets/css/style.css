@@ -217,6 +217,8 @@ span {
     width: 100%;
 }
 
+/* I got these disabled properties from the youtube video I credited in README.md */
+
 .btn:hover:not([disabled]) {
     background-color: #222;
     color: #fff;
@@ -256,7 +258,6 @@ span {
     font-size: 100%;
 }
 
-
 /* Media Query for Large Tablets / Laptop / Desktop screen sizes */
 
 @media screen and (min-width: 1024px) {
@@ -283,5 +284,4 @@ span {
     .rules ul li {
         font-size: 125%;
     }
-
 }
