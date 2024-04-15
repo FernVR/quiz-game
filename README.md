@@ -5,7 +5,7 @@
 
 I created this site with the idea of creating a history general knowledge quiz, designed to challenge and aid students or users of any age group, in improving their history knowledge.
 
-I thought this site would be useful and entertaining to a range of different users, from all age groups and backgrounds. The quiz questions are a wide range of different topics from all parts of history.
+I thought this site would be useful, informative and entertaining to a range of different users, from all age groups and backgrounds. The quiz questions are a wide range of different topics from all parts of history.
 
 You can find the live site [here](https://fernvr.github.io/quiz-game/)
 
@@ -46,7 +46,7 @@ You can find the live site [here](https://fernvr.github.io/quiz-game/)
         - [Home Page Result](#home-page-result)
         - [Rules Page Result](#rules-page-result)
         - [Game Page Result](#game-page-result)
-    - [Test Grid](#test-grid)
+    - [Further Testing](#further-testing)
     - [Fixed Bugs](#fixed-bugs)
     - [Known Bugs](#known-bugs)
 
@@ -89,17 +89,21 @@ images of wireframe sketches and plans of functions.
 
 ## Typography
 
-description of font
+* I used Bebas Neue font as I thought it stood out as a very clear font for a user, which I thought suited the quiz and information presented in the quiz.
+
+* letters were automatically in upper case with this font, which I wanted so the text would be clear and easy to read for users.
+
+![Typography](./assets/images/readme-images/PP2-typography.png)
 
 ## Colour Scheme
 
-(images of colour scheme and background image)
+![Colour Pallete](./assets/images/readme-images/PP2-colour-pallete.png)
 
 * the colours were selected to work well with the background image, to create a warm and welcoming feeling to the game and also for the target audience being teachers or children in a classroom setting.
 
 ## Imagery 
 
-(background image maybe ?)
+![Background Img](./assets/images/readme-images/bg-image-quiz.png)
 
 * The background image was selected to cater to a wide range of users as per the target audience, children/ teenagers, adult students, teachers/tutors.
 
@@ -113,50 +117,57 @@ description of font
 
 ## Home Page 
 
-(screenshot of home page)
+![Home page - laptop](./assets/images/readme-images/PP2-readme-laptop-home.png)
+
+![Home page - mobile](./assets/images/readme-images/PP2-readme-mobile-home.png)
 
 * user is presented with a landing page that contains a box with a brief description of the game and two buttons that link to rules.html and game.html.
 
 ## Rules Page 
 
-(screenshot of rules page)
+![Rules Page - laptop](./assets/images/readme-images/PP2-readme-laptop-rules.png)
+
+![Rules Page - mobile](./assets/images/readme-images/PP2-readme-mobile-rules.png)
 
 * the rules are displayed in an unordered list.
 
-* Rewrite the rules in these points
+* explains the rules to the user and has a button at the bottom to start game.
 
 ## Game Page
 
-(screenshot of game page on mobile and laptop screen sizes)
+![Game Page - laptop](./assets/images/readme-images/PP2-readme-laptop-resetstate-resetscore.png)
+![Game Page - mobile](./assets/images/readme-images/PP2-readme-mobile-resetstate-resetscore.png)
 
 * Both the questions and the answers are shuffled in order with every start of the game.
 
 * The first question is presented with 4 answer options.
 
 * When a user selects their option, it will either turn green if the user selects the correct option, or the incorrect option is selected it will be highlighted red while the correct answer is highlighted green.
-(screenshot of example)
+
+![correct selection - laptop](./assets/images/readme-images/PP2-readme-laptop-selectanswer-correct.png)
+![incorrect selection - laptop](./assets/images/readme-images/PP2-readme-laptop-selectanswer-incorrect.png)
+
+![correct selection - mobile](./assets/images/readme-images/PP2-readme-mobile-selectanswer-correct.png)
+![incorrect selection - mobile](./assets/images/readme-images/PP2-readme-mobile-selectanswer-incorrect.png)
 
 * The score tally is below the header that counts the correct and incorrect scores as the user inputs them.
-(screenshot of example)
 
 * The 'Next' button will be displayed when the user selects their choice, enabling the user to move to the next question once their answer has been selected.
-(screenshot example)
+
 
 ## Show Score Section
 
-(Screenshot of mobile and laptop/tablet sizes)
+![Enter name prompt - laptop](./assets/images/readme-images/PP2-readme-laptop-entername.png)
+![enter name prompt - mobile](./assets/images/readme-images/PP2-readme-mobile-entername.png)
+
+![show score - laptop](./assets/images/readme-images/PP2-readme-laptop-showscore.png)
+![show score - mobile](./assets/images/readme-images/PP2-readme-mobile-showscore.png)
 
 * After submitting the final question, a user receives a prompt on their browser to enter their name before moving onto the final section of the quiz.
 
-(screenshot of mobile and laptop Prompt)
-
 * The username is then displayed when the score message is displayed.
 
-(screenshot)
-
 * The show score function displays a message to the user with their final score. Depending on the users' score the message will change by using an if else statement.
-
-(screenshot)
 
 * The 'Next' button's inner HTML changes to 'Play Again' and restarts the game as well as resetting the score tally.
 
@@ -190,16 +201,13 @@ description of font
     - GitHub is used to store the projects code after being pushed from Git.
 
 1. [Google Fonts:](https://fonts.google.com/)
-    - Google fonts were used to import the 'Montserrat' font into the style.css file which is used on all pages throughout the project.
-
-1. [Font Awesome:](https://fontawesome.com/)
-    - Font Awesome was used on all pages throughout the website to add icons to different sections.
+    - Google fonts were used to import the 'Bebas Neue' font into the style.css file which is used on all pages throughout the project.
 
 1. [Design.com:](https://design.com/)
     - Design.com was used to generate the logo.
 
 1. [Sketchbook:](https://sketchbook.com/)
-    - Sketchpad was used to edit the logo.
+    - Sketchbook was used to edit the logo.
 
 1. [ColorSpace:](https://mycolor.space/)
     - ColorSpace was used to generate the colour palletes for the site.
@@ -258,12 +266,6 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ## Further Testing
 
-### Test Grid 
-
-(screenshot)
-
-I created a testing grid on Apple Numbers which I used throughout the process of building this site. The grids have categories for each link/button to ensure all of them work correctly and redirect to a new tab if needed. There is also a grid to test responsive design for each section of the page, the different sections are outlined below.
-
 * The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
 
 * The website was viewed and tested on a variety of devices such as Desktop, Laptop, iPhone 10, iPhone 12, iPhone 14 Pro and iPad Pro.
@@ -320,20 +322,21 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 
 ## Code
 
-* I took inspiration for structuring the game from this video in on this youtube channel (create a link to the video and channel).
+* I took inspiration for structuring the game from this video in on this youtube channel: [Great Stack](https://www.youtube.com/watch?v=PBcqGxrr9g8&t=1123s).
 * I have highlighted code taken from this tutorial in comments in the Javascript and CSS documents.
+* I used Fisher Yates algorithm to shuffle questions and answers in the functions of this quiz, I took the information from this website [Medium](https://medium.com/@omar.rashid2/fisher-yates-shuffle-a2aa15578d2f).
 
 ## Content
 
-* I used the questions from this website ( link to the website )
+* I used 20 random history quiz questions from this website, [Thought Catalog](https://thoughtcatalog.com/katee-fletcher/2020/04/history-trivia-questions/)
 
 ## Media 
 
-* The background image was taken from unsplash and I have linked the image with all the info about the creator/publisher of the image.
+* The background image was taken from unsplash and I have linked the image with all the info about the creator/publisher of the image. [Unsplash](https://unsplash.com/photos/pink-and-blue-abstract-painting-Qiy4hr18aGs)
 
 # Acknowledgments 
 
-I would like to express my gratitute to my mentor for continuous helpful feedback, advice and resources. Tutor support at Code Institute for their support, as well as the Slack Community, and my class group for always replying to my messages within minutes of being sent! I would also like to thank Code Institute for all the course material I've read and re-read during this process.
+I would like to express my gratitute to my mentor for continuous helpful feedback, advice and resources. Tutor support at Code Institute for their support, as well as the Slack Community, and my class group for always replying to my messages quickly and full of good advice.
 
 
 
