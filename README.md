@@ -266,6 +266,8 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ## Further Testing
 
+* I did a lot of testing during the process of creating this game, mostly the game itself as well as all the links and buttons. I did the majority of testing before adding the current design, to ensure the game was fully functional before moving forward with anything. This included the selectAnswer function and the enterName function, to make sure everything was working correctly and the Javascript was operational.
+
 * The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
 
 * The website was viewed and tested on a variety of devices such as Desktop, Laptop, iPhone 10, iPhone 12, iPhone 14 Pro and iPad Pro.
