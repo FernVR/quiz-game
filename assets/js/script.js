@@ -1,6 +1,8 @@
-// Questions Array
-
-// Add credit of Qs to thought catalog website (project bookmarks) 
+/** Questions Array
+ * Each Quesion is an object with the following properties:
+ * Question: the displayed question on each section of the game 
+ * answers: contains arrays and objects with text: the displayed answer, as well as a correct value which is assigned either true or false if the answer is correct or incorrect.
+*/
 const questions = [
     {
         question: "How long did the war between England and Zanzibar last?",
@@ -201,17 +203,7 @@ let score = 0;
 let incorrect = 0;
 
 
-function enterName() {
-    let userName = prompt("Enter your name");
-    if (userName === null || userName === "") {
-        userName = "Hidden Player";
-    }
-    return userName;
-}
-
-
-
-//  Shuffle the questions array using Fisher-Yates algorithm - FIND A GOOGLE CREDIT FOR THIS
+//  Shuffle the questions array using Fisher-Yates algorithm - Credit to website I found in Readme
 function shuffleQuestions() {
     for (let i = questions.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * i);
@@ -221,7 +213,10 @@ function shuffleQuestions() {
     }
 }
 
-// Shuffle answer options 
+/** Function shuffleAnswers
+ * shuffles the answers same as shuffle quesions but takes the value of the answers and shuffles them.
+ * The function is called in the displayQuestion function so the answers shuffle each time a question is displayed.
+ */
 
 function shuffleAnswers() {
     answersArray = questions[currentQuestionIndex].answers;
@@ -233,7 +228,12 @@ function shuffleAnswers() {
     }
 }
 
-//Function to start the game
+/** startQuiz function to start the game
+ * function calls shuffleQuestions function to shuffle questions at the beginning of each game.
+ * resets score, incorrect and currentQuestionIndex to 0.
+ * sets nextButton innerHTML to 'next' to ensure the next button has the correct text after it being changed during the 'showScore' function.
+ * calls displayQuestion function.
+ */
 function startQuiz() {
     shuffleQuestions();
     score = 0;
@@ -243,7 +243,22 @@ function startQuiz() {
     displayQuestion();
 }
 
-// Function to display the question and possible answers available for a user to select
+// Reset state function removes next button from display until an answer is clicked
+
+function resetState() {
+    nextButton.style.display = "none";
+    while (answerButtons.firstChild) {
+        answerButtons.removeChild(answerButtons.firstChild);
+    }
+}
+
+/** Function displayQuestion
+ *  calls shuffleAnswers function to shuffle the order of the answers listed for the user to select
+ *  calls resetState function to reset the game state before an answer is selected, removes next button.
+ *  displays the question and possible answers to the user
+ *  adds the number of which question and a "." you're on so a user can regularly check their progress throughout the game
+ *  click event listener added to button and calls selectAnswer function when a user clicks an answer button.
+ */
 function displayQuestion() {
     shuffleAnswers();
     
@@ -265,40 +280,12 @@ function displayQuestion() {
     });
 }
 
-// Functions to increment correct and incorrect scores to display in container on top of the game page
-function incrementScore() {
-    score++;
-    document.getElementById("score").textContent = score;
-}
-
-function incrementIncorrect() {
-    incorrect++;
-    document.getElementById("incorrect").textContent = incorrect;
-}
-
-// Reset state function removes next button from display until an answer is clicked
-
-function resetState() {
-    nextButton.style.display = "none";
-    while (answerButtons.firstChild) {
-        answerButtons.removeChild(answerButtons.firstChild);
-    }
-}
-
-// Reset score function to reset the scores on the top of the game to 0
-
-function resetScore() {
-    score = 0;
-    document.getElementById("score").textContent = 0;
-
-    incorrect = 0;
-    document.getElementById("incorrect").textContent = incorrect;
-
-    currentQuestionIndex = 0;
-}
-
-/**  Function to select answer and check if answer is correct or incorrect, answers will have a class name 
-     of "correct" or "incorrect" to change colours in css doc and prevent a user from selecting
+/**  Function selectAnswer
+ * adds classes to button elements called "correct" and "incorrect" depending on whether "correct" is true or false.
+ * CSS .correct and .incorrect sets colour of botton to green or red background colour depending on whether answer is true or false.
+ * calls functions incrementScore and incremementIncorrect in if else statement to increase the values on the score tally when an answer is selected.
+ * calls button.disabled = true to disable the button once user has selected their option, not allowing user to reselect their answer once selected.
+ * displays next button after answer has been selected.
 */
 
 function selectAnswer(e) {
@@ -320,15 +307,62 @@ function selectAnswer(e) {
     nextButton.style.display = "block";
 }
 
-// end of game displays final score
+/** Functions incrementScore and incrementIncorrect - I took inspiration for this feature from the Love Maths Walkthrough project.
+ * Functions to increment correct and incorrect scores to display in container on top of the game page
+*/
+function incrementScore() {
+    score++;
+    document.getElementById("score").textContent = score;
+}
+
+function incrementIncorrect() {
+    incorrect++;
+    document.getElementById("incorrect").textContent = incorrect;
+}
+
+
+/** function resetScore
+ * resets score, incorrect and currentQuestionIndex to 0 when called.
+ */
+
+function resetScore() {
+    score = 0;
+    document.getElementById("score").textContent = 0;
+
+    incorrect = 0;
+    document.getElementById("incorrect").textContent = incorrect;
+
+    currentQuestionIndex = 0;
+}
+
+
+/** Function enterName
+ * a prompt to allow the user to enter their name.
+ * "Hidden Player" is the username assigned to a user if there is no username assigned by the player.
+ */
+function enterName() {
+    let userName = prompt("Enter your name");
+    if (userName === null || userName === "") {
+        userName = "Hidden Player";
+    }
+    return userName;
+}
+
+/** function showScore
+ * calls resetState function
+ * takes user to the final score page after completing all the questions in the quiz.
+ * If else statement to determine how many correct/incorrect answers a user got and displays a different message depending on the users final score.
+ * the enterName function is called here so the user's inputted name is displayed in the final message with the final score.
+ * 'next' button becomes 'play again' and clicking it will restart the game and reset the users score tally.
+ */
 
 function showScore() {
-    
+
     resetState();
 
-    if (score === questions.length){
+    if (score === questions.length) {
         questionElement.innerHTML = `WOW ${enterName()}, what an amazing score! You got ${score} out of ${questions.length}!`;
-    } else if (score > incorrect){
+    } else if (score > incorrect) {
         questionElement.innerHTML = `WOW ${enterName()}, great score! You got ${score} out of ${questions.length}!`;
     } else {
         questionElement.innerHTML = `Better luck next time ${enterName()}, You got ${score} out of ${questions.length}!`;
@@ -338,9 +372,11 @@ function showScore() {
     nextButton.style.display = "block";
 }
 
-/* next button will be displayed so long as there are questions in the array that require an answer
-   showScore function dispays score at the end of game */
 
+/** function handleNextButton
+* next button will be displayed so long as there are questions in the array that require an answer
+* showScore function dispays score at the end of game when user has answered all questions in the array.
+*/
 
 function handleNextButton() {
     currentQuestionIndex++;
@@ -349,12 +385,18 @@ function handleNextButton() {
     } else {
         showScore();
     }
-}; 
+};
+
+/** event listener 'DOMContentLoaded'
+ * ensures that when site content is loaded then the game can start when the user enters the game page.
+ * game will proceed until the answers are all ran through, will reset score and restart game when 'play again' / 'next' button is clicked.
+ * 
+ */
 
 document.addEventListener('DOMContentLoaded', () => {
-    if (nextButton){
+    if (nextButton) {
         nextButton.addEventListener("click", () => {
-            if (currentQuestionIndex < questions.length){
+            if (currentQuestionIndex < questions.length) {
                 handleNextButton();
             } else {
                 resetScore();
