@@ -290,6 +290,10 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ## Known Bugs
 
+* With the enterName() function, I orignally wanted to do a form where a user can input a username and get that value, but struggled to make it work as I only thought about adding it after I worked on most of the project. I'd say I could have found a way to work it in if I hadn't built everything else first, I tried a few different methods but ultimately didn't give myself enough time to find a way to make it work and it was just giving a lot of errors. I added a prompt instead because it was easier but I don't really like the way it looks at the moment.
+
+* If a user clicks on the home or rules page links from the navigation, the game resets and progress isn't saved. I would have liked to have found a way to save the user progress but I didn't have enough time to figure it out. I added it as part of a point in the rules list, just mentioning you can leave the page but progress won't be saved so a user is aware of it before starting the game.
+
 * I don't THINK there are any bugs in this final project, but I did find the debugging process to be difficult at times so there might be bugs I am unaware of. I found using the JSHint validator to be very helpful in assisting me during the process of building this, as it breaks down all the errors and makes it easy to fix issues.
 
 # Deployment
