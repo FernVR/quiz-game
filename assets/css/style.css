@@ -285,3 +285,18 @@ span {
         font-size: 125%;
     }
 }
+
+/* Media Query for large desktop screen sizes (1500px) */
+
+@media screen and (min-width: 1500px) {
+
+    body {
+        background-image: url(../images/bg-image-landscape.webp);
+    }
+
+    .score-area {
+        justify-content: center;
+        gap: 70%;
+    }
+
+}
