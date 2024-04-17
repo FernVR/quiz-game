@@ -3,7 +3,9 @@
 
 ## Overview
 
-I created this site with the idea of creating a history general knowledge quiz, designed to challenge and aid students or users of any age group, in improving their history knowledge.
+I created this site with the idea of creating a history general knowledge quiz, designed to challenge and aid students or users of any age group, in improving their history knowledge. 
+
+I currently work as an English Foreign Language Teacher, and took a lot of inspiration for this project from my students, thinking it would be a fun and interactive way for them to challenge themselves with new vocabulary. I also do a lot of history, music and storytelling through my lessons as I've found it to be very engaging for students, so I had the idea of doing a history online quiz for everyone to be able to participate in no matter their background. 
 
 I thought this site would be useful, informative and entertaining to a range of different users, from all age groups and backgrounds. The quiz questions are a wide range of different topics from all parts of history.
 
