@@ -194,10 +194,6 @@ const questions = [
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
-const scores = document.getElementsByClassName("scores-area");
-const startBtn = document.getElementById("start-btn");
-const rulesBtn = document.getElementById("rules");
-const rulesList = document.getElementById("rules-list");
 
 // Variables
 let currentQuestionIndex = 0;
