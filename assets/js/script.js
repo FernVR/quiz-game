@@ -194,6 +194,8 @@ const questions = [
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
+const scoreElement = document.getElementById('score');
+const incorrectElement = document.getElementById('incorrect');
 
 // Variables
 let currentQuestionIndex = 0;
@@ -302,12 +304,12 @@ function selectAnswer(e) {
 
 function incrementScore() {
     score++;
-    document.getElementById("score").textContent = score;
+    scoreElement.textContent = score;
 }
 
 function incrementIncorrect() {
     incorrect++;
-    document.getElementById("incorrect").textContent = incorrect;
+    incorrectElement.textContent = incorrect;
 }
 
 
@@ -316,12 +318,12 @@ function incrementIncorrect() {
  */
 function resetScore() {
     score = 0;
-    document.getElementById("score").textContent = 0;
+	scoreElement.textContent = '0';
 
-    incorrect = 0;
-    document.getElementById("incorrect").textContent = 0;
+	incorrect = 0;
+	incorrectElement.textContent = '0';
 
-    currentQuestionIndex = 0;
+	currentQuestionIndex = 0;
 }
 
 /** 
