@@ -372,7 +372,7 @@ function handleNextButton() {
     } else {
         showScore();
     }
-};
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     if (nextButton) {
