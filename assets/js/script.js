@@ -219,7 +219,7 @@ function shuffleQuestions() {
  * The answers shuffle each time a question is displayed.
  */
 function shuffleAnswers() {
-    answersArray = questions[currentQuestionIndex].answers;
+    let answersArray = questions[currentQuestionIndex].answers;
     for (let i = answersArray.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * i);
         let temp = answersArray[i];
