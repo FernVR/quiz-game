@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */ 
+
 /** Questions Array
  * Structure taken from a youtube tutorial linked in readme #credits.
  * Each Quesion is an object with the following properties:
