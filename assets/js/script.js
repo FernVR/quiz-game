@@ -231,7 +231,8 @@ function shuffleAnswers() {
 /** 
  * shuffles questions at the beginning of each game.
  * resets score, incorrect and currentQuestionIndex to 0.
- * sets nextButton innerHTML to 'next' to ensure the next button has the correct text after it being changed during the 'showScore' function.
+ * sets nextButton innerHTML to 'next' to ensure the next 
+ * button has the correct text after it being changed during the 'showScore' function.
  * displays the first question.
  */
 function startQuiz() {
@@ -255,7 +256,8 @@ function resetState() {
  *  shuffles the order of the answers listed for the user to select
  *  resets the game state before an answer is selected, removes next button.
  *  displays the question and possible answers to the user
- *  adds the number of which question and a "." you're on so a user can regularly check their progress throughout the game
+ *  adds the number of which question and a "." 
+ * you're on so a user can regularly check their progress throughout the game
  */
 function displayQuestion() {
     shuffleAnswers();
@@ -352,11 +354,16 @@ function showScore() {
     resetState();
 
     if (score === questions.length) {
-        questionElement.innerHTML = `WOW ${enterName()}, what an amazing score! You got ${score} out of ${questions.length}!`;
+        questionElement.innerHTML = 
+        `WOW ${enterName()}, what an amazing score! 
+        You got ${score} out of ${questions.length}!`;
     } else if (score > incorrect) {
-        questionElement.innerHTML = `WOW ${enterName()}, great score! You got ${score} out of ${questions.length}!`;
+        questionElement.innerHTML = 
+        `WOW ${enterName()}, 
+        great score! You got ${score} out of ${questions.length}!`;
     } else {
-        questionElement.innerHTML = `Better luck next time ${enterName()}, You got ${score} out of ${questions.length}!`;
+        questionElement.innerHTML = `Better luck next time ${enterName()},
+         You got ${score} out of ${questions.length}!`;
     }
 
     nextButton.innerHTML = "Play Again";
