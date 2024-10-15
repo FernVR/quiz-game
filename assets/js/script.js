@@ -204,7 +204,11 @@ let currentQuestionIndex = 0;
 let score = 0;
 let incorrect = 0;
 
-//  Shuffle the questions array using Fisher-Yates algorithm - found in the Medium website linked in readme #credits 
+
+/** 
+ * Shuffle the questions array using Fisher-Yates algorithm - 
+ * found in the Medium website linked in readme #credits 
+ */
 function shuffleQuestions() {
     for (let i = questions.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * i);
@@ -215,7 +219,8 @@ function shuffleQuestions() {
 }
 
 /** 
- * shuffles the answers same as shuffle quesions but takes the value of the answers and shuffles them.
+ * shuffles the answers same as shuffle quesions but -
+ * takes the value of the answers and shuffles them.
  * The answers shuffle each time a question is displayed.
  */
 function shuffleAnswers() {
@@ -232,7 +237,8 @@ function shuffleAnswers() {
  * shuffles questions at the beginning of each game.
  * resets score, incorrect and currentQuestionIndex to 0.
  * sets nextButton innerHTML to 'next' to ensure the next 
- * button has the correct text after it being changed during the 'showScore' function.
+ * button has the correct text after it being changed during -
+ * the 'showScore' function.
  * displays the first question.
  */
 function startQuiz() {
@@ -244,7 +250,9 @@ function startQuiz() {
     displayQuestion();
 }
 
-// Removes next button from display until an answer is clicked
+/** 
+ * Removes next button from display until an answer is clicked
+ */
 function resetState() {
     nextButton.style.display = "none";
     while (answerButtons.firstChild) {
@@ -279,10 +287,13 @@ function displayQuestion() {
 }
 
 /**  
- * adds classes to button elements called "correct" and "incorrect" depending on whether "correct" is true or false.
- * CSS .correct and .incorrect sets colour of botton to green or red background colour depending on whether answer is true or false.
+ * adds classes to button elements called "correct" and "incorrect" -
+ * depending on whether "correct" is true or false.
+ * CSS .correct and .incorrect sets colour of botton to green or red -
+ * background colour depending on whether answer is true or false.
  * increases the values on the score tally when an answer is selected.
- * disables the button once user has selected their option, not allowing user to reselect their answer once selected.
+ * disables the button once user has selected their option,-
+ * not allowing user to reselect their answer once selected.
  * displays next button after answer has been selected.
 */
 function selectAnswer(e) {
@@ -304,13 +315,18 @@ function selectAnswer(e) {
     nextButton.style.display = "block";
 }
 
-// Increments correct and incorrect scores to display in container on top of the game page
 
+/** 
+ * Increments correct score 
+ */
 function incrementScore() {
     score++;
     scoreElement.textContent = score;
 }
 
+/** 
+ * Increments incorrect score 
+ */
 function incrementIncorrect() {
     incorrect++;
     incorrectElement.textContent = incorrect;
@@ -323,16 +339,15 @@ function incrementIncorrect() {
 function resetScore() {
     score = 0;
 	scoreElement.textContent = '0';
-
 	incorrect = 0;
 	incorrectElement.textContent = '0';
-
 	currentQuestionIndex = 0;
 }
 
 /** 
  * a prompt to allow the user to enter their name.
- * "Hidden Player" is the username assigned to a user if there is no username assigned by the player.
+ * "Hidden Player" is the username assigned to a user -
+ * if there is no username assigned by the player.
  */
 function enterName() {
     let userName = prompt("Enter your name");
@@ -344,11 +359,14 @@ function enterName() {
 
 /** 
  * resets game state
- * takes user to the final score page after completing all the questions in the quiz.
+ * takes user to the final score page after completing all -
+ * the questions in the quiz.
  * determines how many correct/incorrect answers a user got
  * displays a different message depending on the users final score.
- * the user's inputted name is displayed in the final message with the final score.
- * 'next' button becomes 'play again' and clicking it will restart the game and reset the users score tally.
+ * the user's inputted name is displayed in the final message - 
+ * with the final score.
+ * 'next' button becomes 'play again' and clicking it will -
+ * restart the game and reset the users score tally.
  */
 function showScore() {
     resetState();
@@ -371,8 +389,10 @@ function showScore() {
 }
 
 /** 
-* next button will be displayed so long as there are questions in the array that require an answer
-* showScore function dispays score at the end of game when user has answered all questions in the array.
+* next button will be displayed so long as there are questions -
+ in the array that require an answer
+* showScore function dispays score at the end of game when -
+ user has answered all questions in the array.
 */
 function handleNextButton() {
     currentQuestionIndex++;
